@@ -1,0 +1,17 @@
+body {
+    background-color: #222;
+    color: #999;
+}
+
+button {
+    font-weight: bold;
+    padding: 10px;
+}
+
+#button-increment {
+    background-color: #8f8;
+}
+
+#button-decrement {
+    background-color: #f88;
+}
