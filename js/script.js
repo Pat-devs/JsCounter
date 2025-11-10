@@ -19,16 +19,11 @@ function incrementCounter() {
     counterValueElement.textContent = counter
 }
 
-incrementCounter()
-
 // decrements the counter by -1 and update the counter-value element with new value
 function decrementCounter() {
     counter = counter - 1 // decrement the counter value
     counterValueElement.textContent = counter // update the counter-value text
 }
-
-decrementCounter()
-decrementCounter()
 
 // resets the counter back to 0, and updates the counter-value element
 function resetCounter() {
@@ -36,4 +31,15 @@ function resetCounter() {
     counterValueElement.textContent = counter
 }
 
-resetCounter()
+// event handling
+
+// addEventListener needs 2 arguments:
+// 1. Type of event in quotes or doublequotes, f.eks: "click"
+// 2. Event handler function, f.eks: incrementCounter (important, only write the name of the function without paranthesis at back, otherwise the function would fire immediately and the event handler would fail to run as intended)
+buttonIncrement.addEventListener("click", incrementCounter )
+
+// decrement event handler
+buttonDecrement.addEventListener("click", decrementCounter )
+
+// reset event handler
+buttonResetCounter.addEventListener("click", resetCounter )
