@@ -21,10 +21,12 @@ function incrementCounter() {
 
 // decrements the counter by -1 and update the counter-value element with new value
 function decrementCounter() {
-    counter = counter - 1 // decrement the counter value
-    counterValueElement.textContent = counter // update the counter-value text
-}
 
+    if (counter > 0) {
+        counter = counter - 1 // decrement the counter value
+        counterValueElement.textContent = counter // update the counter-value text
+    }
+}
 // resets the counter back to 0, and updates the counter-value element
 function resetCounter() {
     counter = 0
@@ -33,9 +35,9 @@ function resetCounter() {
 
 // event handling
 
-// addEventListener needs 2 arguments:
-// 1. Type of event in quotes or doublequotes, f.eks: "click"
-// 2. Event handler function, f.eks: incrementCounter (important, only write the name of the function without paranthesis at back, otherwise the function would fire immediately and the event handler would fail to run as intended)
+// Clicks
+
+// increment event handler
 buttonIncrement.addEventListener("click", incrementCounter )
 
 // decrement event handler
@@ -43,3 +45,32 @@ buttonDecrement.addEventListener("click", decrementCounter )
 
 // reset event handler
 buttonResetCounter.addEventListener("click", resetCounter )
+
+
+// Keyboard events
+// require bit more setup...
+
+
+// function checks wich key was pressed
+function keyCheck(eventInfoObject) {
+     console.log(eventInfoObject)
+
+    // decide what to do?
+
+    // if + was pressed, then run the incrementCounter function
+    if (eventInfoObject.key == "+") {
+        incrementCounter()
+    }
+    // if - was pressed,  then run the decrementCounter function
+    if (eventInfoObject.key == "-") {
+        decrementCounter()
+    }
+    // if Backspace is pressed, then reset the counter
+    if (eventInfoObject.key == "Backspace") {
+        resetCounter()
+    }
+
+}
+
+
+window.addEventListener("keydown", keyCheck )
