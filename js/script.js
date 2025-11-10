@@ -65,11 +65,10 @@ function keyCheck(eventInfoObject) {
     if (eventInfoObject.key == "-") {
         decrementCounter()
     }
-    // if Backspace is pressed, then reset the counter
-    if (eventInfoObject.key == "Backspace") {
+    // if either Backspace or Delete is pressed, then reset the counter
+    if (eventInfoObject.key == "Backspace" || eventInfoObject.key == "Delete") {
         resetCounter()
     }
-
 }
 
 
