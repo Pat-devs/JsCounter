@@ -5,22 +5,12 @@
 <button id="button-reset">Reset counter</button>
 */
 
-// selecting elements with javascript
-
-// #1 using the querySelector method
-
-// declare a variable named "buttonElement", and store the value of querySelector query in it, in this case first element that is a button
-let buttonElement = document.querySelector("button")
-
-console.log(buttonElement)
-
-// declare a variable and grab the element with id #button-decrement
+// select all the buttons, and store them in each variable
+let buttonIncrement = document.querySelector("#button-increment")
 let buttonDecrement = document.querySelector("#button-decrement")
+let buttonResetCounter = document.querySelector("#button-reset")
 
+console.log(buttonIncrement)
 console.log(buttonDecrement)
+console.log(buttonResetCounter)
 
-
-// to select elements by class name, use .classname (like in CSS)
-let someDivs = document.querySelector(".somedivs") 
-
-console.log(someDivs)
