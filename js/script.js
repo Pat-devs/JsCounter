@@ -35,17 +35,22 @@ function greet() {
 }
 
 // to run a function, write its name, followed by ()
-greet()
-greet()
-greet()
-greet()
-greet()
-greet()
-greet()
-greet()
 
 // increment counter variable
 // counter = counter + 1
 
 // print counter variable
 // console.log(counter)
+
+// create a function that will increment the counter by +1
+// and then print it out in the console
+function incrementCounter() {
+    counter = counter + 1 // increment the counter value
+    console.log(counter) // print the counter value
+}
+
+incrementCounter()
+incrementCounter()
+incrementCounter()
+incrementCounter()
+incrementCounter()
