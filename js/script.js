@@ -9,13 +9,18 @@
 
 // #1 using the querySelector method
 
+// declare a variable named "buttonElement", and store the value of querySelector query in it, in this case first element that is a button
 let buttonElement = document.querySelector("button")
 
 console.log(buttonElement)
 
+// declare a variable and grab the element with id #button-decrement
+let buttonDecrement = document.querySelector("#button-decrement")
 
-// #1b to select all elements that match a query:
+console.log(buttonDecrement)
 
-let allButtons = document.querySelectorAll("button")
 
-console.log(allButtons)
+// to select elements by class name, use .classname (like in CSS)
+let someDivs = document.querySelector(".somedivs") 
+
+console.log(someDivs)
